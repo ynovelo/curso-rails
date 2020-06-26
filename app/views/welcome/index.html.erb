@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+<h1>Bienvenido <%= current_user.email %></h1>
+<%end%>
+
+<% [1,2].each do |number| %>
+<p> número <%= number %></p>
+
+<%end%>
+<% name = "isabel" %>
+<%= "Hola #{name}" %>

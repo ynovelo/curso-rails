@@ -1,0 +1,28 @@
+<nav class="be-red white large-padding">
+      <ul class="no-list row center-xs">
+        <li class="col-md">
+          <%= link_to "Inicio", root_path %>
+           
+        </li>
+        <li class="col-md">
+          Diseño          
+        </li>
+        <li class="col-md">
+          Programación          
+        </li>
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete%>
+          </li>
+        <%else%>
+          <li>
+            <%= link_to "Iniciar sesión", new_user_session_path %>
+          </li>
+          <li>
+            <%= link_to "Crear cuenta", new_user_registration_path %>
+          </li>
+
+        <%end%>
+        
+      </ul>
+    </nav>
